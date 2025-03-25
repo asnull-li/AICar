@@ -12,9 +12,6 @@ Objects/
 *.hex
 
 # IDE配置文件
-Project.uvguix.*
-Project.uvoptx
-Project.uvprojx
 AICar.code-workspace
 .eide/
 .vscode/
