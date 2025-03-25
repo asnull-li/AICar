@@ -1,0 +1,46 @@
+# 编译生成文件
+DebugConfig/
+Listings/
+Objects/
+*.o
+*.d
+*.axf
+*.elf
+*.map
+*.lst
+*.bin
+*.hex
+
+# IDE配置文件
+Project.uvguix.*
+Project.uvoptx
+Project.uvprojx
+AICar.code-workspace
+.eide/
+.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 用户特定文件
+*.user
+*.suo
+*.sdf
+*.opensdf
+
+# Keil编译生成
+*.crf
+*.dep
+*.htm
+*.lnp
+*.plg
+*.sct
+*.uvgui.*
+*.uvopt
+*.uvproj
+
+# 其他
+*.bak
+*.log
+*.tmp
