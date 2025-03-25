@@ -1,17 +1,18 @@
-#include "stm32f10x.h"                  // Device header
-
+#include "main.h"
 int main(void)
 {
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOC, &GPIO_InitStructure);
-//	GPIO_SetBits(GPIOC, GPIO_Pin_13);
-	GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+	OLED_Init();
+	Servo_Init(); // 舵机初始化
+	Motor_Init(); // 电机初始化
 	while (1)
 	{
-		
+		OLED_ShowNum(2,3,1,1);
+		OLED_ShowString(2,5,"Hello");
+		Servo1_SetAngle(60);
+		MotorLeft1(50,"forward");
+		MotorLeft2(50,"forward");
+		MotorRight1(50,"forward");
+		MotorRight2(50,"forward");
+
 	}
 }
