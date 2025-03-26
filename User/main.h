@@ -5,5 +5,6 @@
 #include "OLED.h"
 #include "Servo.h"
 #include "Motor.h"
+#include "Delay.h"
 
 #endif

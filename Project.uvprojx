@@ -333,10 +333,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--no-multibyte-chars</MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\User;.\Library;.\Hardware\Inc</IncludePath>
+              <IncludePath>.\Start;.\User;.\Library;.\Hardware\Inc;.\System</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -661,11 +661,6 @@
           <GroupName>Hardware</GroupName>
           <Files>
             <File>
-              <FileName>OLED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\OLED.c</FilePath>
-            </File>
-            <File>
               <FileName>Servo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Servo.c</FilePath>
@@ -684,6 +679,16 @@
               <FileName>Motor_PWM.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Motor_PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>OLED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\OLED.c</FilePath>
+            </File>
+            <File>
+              <FileName>OLED_Data.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\OLED_Data.c</FilePath>
             </File>
           </Files>
         </Group>
