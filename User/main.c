@@ -4,10 +4,37 @@ int main(void)
 	OLED_Init();
 	Servo_Init(); // 舵机初始化
 	Motor_Init(); // 电机初始化
-
-	
+	Serial_Init(); // 串口初始化
+	// OLED_ShowImage(0, 0, 128, 64, boredFace);
+	// OLED_Update();
+	Serial_SendString("face1_OK\r\n");
 	while (1)
 	{
+		if (Serial_RxFlag == 1)
+		{
+			Serial_SendString("face1_OK\r\n");
+			OLED_ShowString(0, 0, Serial_RxPacket,OLED_6X8);
+			OLED_Update();
+			if (strcmp(Serial_RxPacket, "face1") == 0)
+			{
+				OLED_ShowImage(0, 0, 128, 64, blankFace);
+				OLED_Update();
+				Serial_SendString("face1_OK\r\n");
+				
+			}
+			else if (strcmp(Serial_RxPacket, "face2") == 0)
+			{
+				OLED_ShowImage(0, 0, 128, 64, angryFace);
+				OLED_Update();
+				Serial_SendString("face1_OK\r\n");
+			}
+			Serial_RxFlag = 0;
+		}
+	
+		
+		/** 
+		Servo1_SetAngle(0);
+		Servo2_SetAngle(90);
 		OLED_ShowImage(0, 0, 128, 64, blankFace);
 		OLED_Update();
 		Delay_ms(1000);
@@ -38,13 +65,12 @@ int main(void)
 		OLED_ShowImage(0, 0, 128, 64, loveFace);
 		OLED_Update();
 		Delay_ms(1000);
-
+*/
 		// Servo1_SetAngle(60);
 		// Servo2_SetAngle(60);
 		// MotorLeft1(50,"forward");
 		// MotorLeft2(50,"forward");
 		// MotorRight1(50,"forward");
 		// MotorRight2(50,"forward");
-		
 	}
 }

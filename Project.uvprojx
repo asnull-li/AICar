@@ -690,6 +690,11 @@
               <FileType>1</FileType>
               <FilePath>.\Hardware\OLED_Data.c</FilePath>
             </File>
+            <File>
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Serial.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
