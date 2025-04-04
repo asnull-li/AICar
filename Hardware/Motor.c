@@ -18,6 +18,8 @@ void Motor_Init(void)
 	Motor_PWM_Init();
 }
 
+
+
 /**
  * @brief 左侧第一个电机
  * @param speed 速度
@@ -92,6 +94,28 @@ void MotorRight2(int speed,char *type){
 		GPIO_ResetBits(GPIOB, GPIO_Pin_6);
 		Motor_PWM_SetCompare4(speed);
 	}
+}
+
+/**
+ * @brief 小车前进
+ * @param speed 速度
+ */
+void MotorForward(int speed){
+	MotorLeft1(speed,"forward");
+	MotorLeft2(speed,"forward");
+	MotorRight1(speed,"forward");
+	MotorRight2(speed,"forward");
+}
+
+/**
+ * @brief 小车后退
+ * @param speed 速度
+ */
+void MotorBackward(int speed){
+	MotorLeft1(speed,"backward");
+	MotorLeft2(speed,"backward");
+	MotorRight1(speed,"backward");
+	MotorRight2(speed,"backward");	
 }
 
 // 电机制动

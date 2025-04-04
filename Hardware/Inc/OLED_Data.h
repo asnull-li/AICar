@@ -33,7 +33,7 @@ extern const ChineseCell_t OLED_CF16x16[];
 /*表情数据声明*/
 extern const uint8_t blankFace[];
 extern const uint8_t questionFace[];
-extern const uint8_t bigEyeFace[];
+extern const uint8_t bigEyesFace[];
 extern const uint8_t astonishmentFace[];
 extern const uint8_t happyFace[];
 extern const uint8_t trappedFace[];

@@ -695,6 +695,11 @@
               <FileType>1</FileType>
               <FilePath>.\Hardware\Serial.c</FilePath>
             </File>
+            <File>
+              <FileName>actions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\actions.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
