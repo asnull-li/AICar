@@ -35,7 +35,6 @@ void Servo_PWM_Init(void)
 
 void Servo_PWM_SetCompare4(uint16_t Compare)
 {
-	TIM_SetCompare3(TIM3, Compare);
 	TIM_SetCompare4(TIM3, Compare);
 }
 

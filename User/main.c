@@ -10,6 +10,7 @@ int main(void)
 	OLED_Update();
 	while (1)
 	{
+		
 		if (Serial_RxFlag == 1)
 		{
 			char jsonStr[512]; // 存储接收到的JSON字符串
@@ -72,35 +73,8 @@ int main(void)
 					}
 				}
 			}
-			// Serial_SendString(Serial_RxPacket);
-			// cJSON *root = cJSON_Parse(Serial_RxPacket);
-			// if (root) {
-			// 	Serial_SendString("actions0_ok!!");
-			// 	// 获取response字符串
-			// 	cJSON *response = cJSON_GetObjectItem(root, "response");
-			// 	if (response && response->type == cJSON_String) {
-			// 		Serial_SendString(response->valuestring);
-			// 	}
-
-			// 	// 获取actions数组
-			// 	cJSON *actions = cJSON_GetObjectItem(root, "actions");
-			// 	Serial_SendString("actions1_ok!!");
-			// 	if (actions && actions->type == cJSON_Array) {
-			// 		Serial_SendString("actions2_ok!!");
-			// 		int actionCount = cJSON_GetArraySize(actions);
-			// 		for (int i = 0; i < actionCount; i++) {
-			// 			cJSON *action = cJSON_GetArrayItem(actions, i);
-			// 			if (action && action->type == cJSON_String) {
-			// 				char *action_str = action->valuestring;
-			// 				Serial_SendString(action_str);
-			// 				beginActions(action_str);
-			// 			}
-			// 		}
-			// 	}
-
-			// 	cJSON_Delete(root); // 释放内存
-			// }
 			Serial_RxFlag = 0;
 		}
+		
 	}
 }
