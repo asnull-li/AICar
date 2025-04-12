@@ -33,7 +33,7 @@ void headDown(void){
 
 void headCenter(void){
 	Servo1_SetAngle(75);
-	Servo2_SetAngle(50);
+	Servo2_SetAngle(45);
 }
 
 void headNod(void){
@@ -46,7 +46,7 @@ void headNod(void){
 	headUp();
 	Delay_ms(200);
 	headDown();
-	Servo2_SetAngle(50);
+	Servo2_SetAngle(45);
 }
 
 void headShake(void){

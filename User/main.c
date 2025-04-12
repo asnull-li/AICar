@@ -8,12 +8,13 @@ int main(void)
 	Serial_Init(); // 串口初始化
 	OLED_ShowImage(0, 0, 128, 64, blankFace);
 	OLED_Update();
+	headCenter();
 	while (1)
 	{
 		
 		if (Serial_RxFlag == 1)
 		{
-			char jsonStr[512]; // 存储接收到的JSON字符串
+			char jsonStr[1024]; // 存储接收到的JSON字符串
 			strcpy(jsonStr, Serial_RxPacket);
 
 			// 查找actions数组

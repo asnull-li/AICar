@@ -9,5 +9,14 @@ void MotorRight1(int speed,char *type);
 void MotorRight2(int speed,char *type);
 void MotorBraking(void);
 void MotorStop(void);
+void MotorMoveLeft(int speed);
+void MotorMoveRight(int speed);
+void MotorRotateLeft(int speed);
+void MotorRotateRight(int speed);
+void MotorMoveLeftForward(int speed);
+void MotorMoveRightForward(int speed);
+void MotorMoveLeftBackward(int speed);
+void MotorMoveRightBackward(int speed);
+
 #endif
 

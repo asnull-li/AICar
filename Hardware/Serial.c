@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-char Serial_RxPacket[512];				//"@MSG\r\n"
+char Serial_RxPacket[1024];				//"@MSG\r\n"
 uint8_t Serial_RxFlag;
 
 void Serial_Init(void)
