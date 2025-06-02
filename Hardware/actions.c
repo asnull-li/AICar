@@ -145,7 +145,9 @@ void beginActions(char *actions)
 {
     // 表情匹配
     faceMacth(actions);
+    // 小车运动匹配
     carMoveMatch(actions);
+    // 头部动作匹配
     headActionsMatch(actions);
     if (strncmp(actions, "delay,", 6) == 0) {
         int delay_ms = atoi(actions + 6); // 解析延时毫秒数
